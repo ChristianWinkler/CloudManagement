@@ -1,4 +1,4 @@
 eclipse.preferences.version=1
-encoding/AddDevice.py=utf-8
-encoding/AddLocation.py=utf-8
-encoding/DeleteTestOffice.py=utf-8
+encoding/adddevice.py=utf-8
+encoding/addlocation.py=utf-8
+encoding/deletetestoffice.py=utf-8

@@ -9,4 +9,3 @@ class Open(Element):
     """
     def execute(self, driver, config):
         driver.get("{base_url}".format(**config["Open"]))
-        driver.set_page_load_timeout(20)

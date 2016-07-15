@@ -14,3 +14,13 @@ class OpenLoginClose(Sequence):
         Open().execute(driver, config)
         Login().execute(driver, config)
         Close().execute(driver, config)
+        
+class OpenLoginNewLocation(Sequence):
+    def execute(self, driver, config):
+        OpenLogin().execute(driver, config)
+        addLocation().execute(driver, config)
+        
+class OpenLoginDeleteLocations(Sequence):
+    def execute(self, driver, config):
+        OpenLogin().execute(driver, config)
+        deleteLocations().execute(driver, config)
