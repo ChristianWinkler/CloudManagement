@@ -9,7 +9,7 @@ def main():
     driver_factory = LocalFirefox()
     config={
               "Open" : {
-                        "base_url": "https://bs-ct-dev.devolo.net/#/"
+                        "base_url": "https://bs-ct-dev.devolo.net"
                         },
               "Login": {
                         "login": "vitalii.petruniak@sogeti.de",
@@ -23,7 +23,8 @@ def main():
                               }
             }
     
-    OpenLoginDeleteLocations().execute(driver_factory.get(), config)
+    OpenLoginDeleteLocationsClose().execute(driver_factory.get(), config)
+    #OpenLoginNewLocationClose().execute(driver_factory.get(), config)
   
 if __name__ == "__main__":
     main()

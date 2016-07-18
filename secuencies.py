@@ -20,7 +20,14 @@ class OpenLoginNewLocation(Sequence):
         OpenLogin().execute(driver, config)
         addLocation().execute(driver, config)
         
-class OpenLoginDeleteLocations(Sequence):
+class OpenLoginDeleteLocationsClose(Sequence):
     def execute(self, driver, config):
         OpenLogin().execute(driver, config)
         deleteLocations().execute(driver, config)
+        Close().execute(driver, config)
+
+class OpenLoginNewLocationClose(Sequence):
+    def execute(self, driver, config):
+        OpenLogin().execute(driver, config)
+        addLocation().execute(driver, config)
+        Close().execute(driver, config)
