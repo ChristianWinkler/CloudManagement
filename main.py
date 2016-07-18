@@ -23,8 +23,8 @@ def main():
                               }
             }
     
-    OpenLoginDeleteLocationsClose().execute(driver_factory.get(), config)
-    #OpenLoginNewLocationClose().execute(driver_factory.get(), config)
+    #OpenLoginDeleteLocationsClose().execute(driver_factory.get(), config)
+    OpenLoginNewLocationClose().execute(driver_factory.get(), config)
   
 if __name__ == "__main__":
     main()
