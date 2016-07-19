@@ -11,4 +11,10 @@ class Login(Element):
         login_password.send_keys(config["Login"]["login"])
         login_password = driver.find_element_by_id("user_password")
         login_password.send_keys(config["Login"]["password"])
-        login_password.send_keys(Keys.RETURN)
+        driver.find_element_by_name('commit').click()
+        try:
+            element = WebDriverWait(driver, 20).until(
+                                                      EC.element_to_be_selected((By.NAME, 'add_circle'))
+                                                      )
+        finally:
+            print "Fail."

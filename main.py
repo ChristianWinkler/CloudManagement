@@ -24,7 +24,7 @@ def main():
                               }
             }
     
-    OpenLoginNewLocationClose().execute(driver_factory.get(), config)
+    OpenLoginClose().execute(driver_factory.get(), config)
   
 if __name__ == "__main__":
     main()
