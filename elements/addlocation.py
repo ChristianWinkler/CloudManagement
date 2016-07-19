@@ -20,4 +20,5 @@ class addLocation(Element):
         driver.find_element_by_id("input_56").clear()
         driver.find_element_by_id("input_56").send_keys(config["LocationData"]["new_postcode"])
         driver.find_element_by_xpath("//button[@type='submit']").submit()
+        driver.find_element_by_class_name("devolo_logo_lg").click()
         print "The test is done."
