@@ -3,3 +3,4 @@ from elements.login import Login
 from elements.close import Close
 from elements.addlocation import addLocation
 from elements.deletelocations import deleteLocations
+from elements.locationlist import doLocationList

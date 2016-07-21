@@ -39,3 +39,10 @@ class OpenLoginNewLocation3Close(Sequence):
         addLocation().execute(driver, config)
         addLocation().execute(driver, config)
         Close().execute(driver, config)
+        
+class OpenLoginLocationlistClose(Sequence):
+    def execute(self, driver, config):
+        Open().execute(driver, config)
+        Login().execute(driver, config)
+        doLocationList().execute(driver, config)
+        Close().execute(driver, config)

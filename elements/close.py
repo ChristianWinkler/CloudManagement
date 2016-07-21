@@ -6,4 +6,4 @@ class Close(Element):
     """
     def execute(self, driver, config):
         driver.close()
-        print "All tests run."
+        print "All tests run"
