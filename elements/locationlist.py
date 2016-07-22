@@ -20,17 +20,18 @@ class doLocationList (Element):
                                               )
         
         #create a list of locations
-        
-        
-        rowCount = len(driver.find_elements(By.XPATH, "//table/tbody/tr"))
-        elements = driver.find_elements(By.XPATH, "//table/tbody/tr/td")
-        print elements.text
-        """for i in range(rowCount):
-            if n < rowCount[i]:
-                element = driver.find_element_by_xpath("//table/tbody/tr/td/a").text
-                print element
-                n = element
-                i = ++i
+            
+        rowCount = len(driver.find_elements(By.XPATH, "//table/tbody/tr"))        
+        for i in range(1, rowCount+1):
+                object = driver.find_element_by_xpath("//table/tbody/tr["+str(i)+"]/td[2]/a").text
+                n = object
                 LocationList.append(n)
-        print LocationList"""
+        print LocationList
+        
+        # click on the second location
+        driver.find_element_by_xpath("//table/tbody/tr[1]/td[2]/a").click()
+        #wait til settings wil be clickable
+        element = WebDriverWait(driver, 20).until(
+                                                      EC.element_to_be_clickable((By.XPATH, '//md-sidenav[2]/md-content/ul/li[14]/menu-link/a/span'))
+                                                      )
         
