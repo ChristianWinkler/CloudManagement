@@ -30,8 +30,19 @@ class doLocationList (Element):
         
         # click on the second location
         driver.find_element_by_xpath("//table/tbody/tr[1]/td[2]/a").click()
-        #wait til settings wil be clickable
+        #wait till settings will be clickable
         element = WebDriverWait(driver, 20).until(
                                                       EC.element_to_be_clickable((By.XPATH, '//md-sidenav[2]/md-content/ul/li[14]/menu-link/a/span'))
                                                       )
+        element.click()
+        # deleting location
+        driver.find_element_by_xpath("//location-settings-menu/md-menu/button").click()
+        element = WebDriverWait(driver, 20).until(
+                                                      EC.element_to_be_clickable((By.XPATH, "(//button[@type='button'])[6]"))
+                                                      )
+        element.click()
+        driver.find_element_by_xpath("(//button[@type='button'])[6]").click()
+        driver.find_element_by_xpath("(//button[@type='button'])[32]").click()
+        driver.find_element_by_xpath("(//button[@type='button'])[34]").click()
+        
         

@@ -20,7 +20,7 @@ def main():
                               "new_name": address.generateName(5, 30),
                               "new_address": address.generateAddress(6, 50),
                               "new_city": address.generateCity(3, 20),
-                              "new_postcode": address.generatePostcode(2, 8)
+                              "new_postcode": address.generatePostcode(3, 8)
                               }
             }
     
